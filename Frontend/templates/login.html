@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Campus Lost & Found</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+ 
+    <header>
+<h1>Campus Lost & Found</h1>
+<p>Helping you find what you lost</p>
+</header>
+ 
+    <main>
+<section class="card">
+<h2>Report Lost Item</h2>
+<form>
+<input type="text" placeholder="Item Name" required>
+<input type="text" placeholder="Location Lost" required>
+<textarea placeholder="Description"></textarea>
+<button type="submit">Submit</button>
+</form>
+</section>
+ 
+        <section class="card">
+<h2>Search Found Items</h2>
+<input type="text" placeholder="Search items...">
+<button>Search</button>
+</section>
+</main>
+ 
+    <footer>
+<p>© Residential Campus Lost & Found</p>
+</footer>
+ 
+</body>
+</html>
