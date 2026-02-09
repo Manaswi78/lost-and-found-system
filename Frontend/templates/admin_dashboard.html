@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+<h2>Admin Analytics</h2>
+<p>Total Lost Items: {{ lost }}</p>
+<p>Total Found Items: {{ found }}</p>
+<a href="/logout">Logout</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2 style="text-align:center;">Welcome {{ user }}</h2>
+
+<div class="card">
+<h3>Report Lost Item</h3>
+<form action="/report_lost" method="POST" enctype="multipart/form-data">
+    <input type="text" name="item" placeholder="Item Name" required>
+    <input type="text" name="brand" placeholder="Brand">
+    <input type="text" name="color" placeholder="Color">
+    <textarea name="desc" placeholder="Description"></textarea>
+    <input type="text" name="hidden" placeholder="Hidden detail for verification">
+    <input type="file" name="image" required>
+    <button type="submit">Submit Lost Report</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Found an Item</h3>
+<form action="/found_item" method="POST" enctype="multipart/form-data">
+    <input type="text" name="place" placeholder="Found at location" required>
+    <input type="file" name="image" required>
+    <button type="submit">Submit Found Item</button>
+</form>
+</div>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>
